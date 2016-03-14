@@ -1,0 +1,125 @@
+/* ------------------------------  */
+/*         General Styles          */
+/* ------------------------------  */
+
+*{
+  box-sizing: border-box;
+}
+
+
+/* ------------------------------  */
+/*      Styles for Nav Bars        */
+/* ------------------------------  */
+
+header, #navBar, #contentContainer{
+	border: 1px solid deeppink;
+}
+
+#navHeader{
+	/* width: 980px; */
+	max-width: auto;
+	text-align: left;
+	margin: 0 auto;
+	height: 100px;
+}
+
+.logo{
+	display: block;
+	float: left;
+	width: 75px;
+	height: 100px;
+	margin-left: 15px;
+}
+
+input{
+	margin: 20px;
+	height: 34px;
+	width: 250px;
+}
+
+.tab{
+	display: inline-block;
+	vertical-align: baseline;
+	background: transparent;
+	margin-right: 12px;
+	cursor: pointer;
+}
+
+#imgContainer{
+	margin: 0px auto;
+    display: inline-block;
+}
+
+img{
+	height: auto;
+    max-width: 100%;
+}
+
+/* ------------------------------  */
+/*         Other Styles            */
+/* ------------------------------  */
+#viewsContainer{
+	display: inline-block;
+	word-wrap: break-word;
+	background-color: lightpink;
+}
+
+.listView{
+	display: inline-block;
+	border: 1px solid lightpink;
+	position: relative;
+	line-height: 1.4;
+	font-family: "Graphik Web","Arial","Helvetica",sans-serif;
+	border-radius: 3px;
+	overflow: hidden;
+	font-size: 12px;
+	width: 33%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+span{
+	display: block;
+	overflow: hidden;
+}
+
+.itemTitle{
+	overflow: hidden;
+}
+
+.detailBox{
+	display: block-level;
+}
+
+.detailImageBox{
+	width: 640px; 
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+}
+
+.detailImage{
+	display: inline-block;
+	width: 50%;
+	height: auto;
+}
+
+.detailDesc{
+	display: inline-block;
+	padding: 50px;
+}
+
+.detailList{
+	display: block;
+}
+
+.itemPrice{
+	text-align: right;
+}
+
+
+
+
+
