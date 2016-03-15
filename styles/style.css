@@ -11,16 +11,16 @@
 /*      Styles for Nav Bars        */
 /* ------------------------------  */
 
-header, #navBar, #contentContainer{
+header, #contentContainer{
 	border: 1px solid deeppink;
 }
 
 #navHeader{
-	/* width: 980px; */
+	width:100%;
 	max-width: auto;
 	text-align: left;
 	margin: 0 auto;
-	height: 100px;
+	height: 120px;
 }
 
 .logo{
@@ -32,9 +32,16 @@ header, #navBar, #contentContainer{
 }
 
 input{
-	margin: 20px;
-	height: 34px;
-	width: 250px;
+	height: 40px;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+ul{
+	display: inline-block;
 }
 
 .tab{
@@ -66,7 +73,7 @@ img{
 
 .listView{
 	display: inline-block;
-	border: 1px solid lightpink;
+	border: 1px solid purple;
 	position: relative;
 	line-height: 1.4;
 	font-family: "Graphik Web","Arial","Helvetica",sans-serif;
@@ -90,6 +97,9 @@ span{
 
 .detailBox{
 	display: block-level;
+	border: 1px solid purple;
+	width: 25%;
+	height: 350px;
 }
 
 .detailImageBox{

@@ -46,7 +46,15 @@ var EtsyScrollView = Backbone.View.extend({
 	},
 
 	events: {
-		"click img": "_triggerDetailView"
+		"click img": "_triggerDetailView",
+		"keydown input": '_searchByKeyword'
+	},
+
+	_searchByKeyword: function(keyEvent) {
+		var searchTerm = keyEvent.target.value
+		if(keyEvent.keyCode === 13){
+			location.hash = 'search/' + searchTerm
+		}
 	},
 
 	_triggerDetailView: function(clickEvent){
@@ -58,7 +66,7 @@ var EtsyScrollView = Backbone.View.extend({
 	_render: function(){
 		console.log(this.model)
 		var dataArray = this.model.get('results')
-		var listingUrlString = ''
+		var listingUrlString = '<input type="text" placeholder="Search here">'
 		//console.log(dataArray[i])
 		
 		for (var i=0; i<dataArray.length; i++){
@@ -138,6 +146,7 @@ var EtsyRouter = Backbone.Router.extend({
 	routes:{
 		"scroll/:query" : "handleScrollView",
 		"detail/:id" : "handleDetailView",
+		"search/:searchTerm": "handleEtsySearchData",
 		"*default" : "handleScrollView"
 	},
 
@@ -170,6 +179,20 @@ var EtsyRouter = Backbone.Router.extend({
 				api_key: detailModel._apiKey
 			}
 		})
+	},
+
+	handleEtsySearchData: function(searchTerm){
+		var model = new EtsyModel()
+		var newView = new EtsyScrollView(model)
+		model.fetch({
+			dataType: "jsonP",
+			data:{
+				includes: "Images,Shop",
+				api_key: model._apiKey,
+				keywords: searchTerm,
+			}
+		})
+
 	},
 
 	initialize: function(){
